@@ -7,6 +7,8 @@ calc.onclick = function(){
   var height = document.getElementById('rectangle__height');
   var per = document.getElementById('rectangle__perimeter');
   var are = document.getElementById('rectangle__area');
+  per.attr('disabled','disabled');
+  are.attr("disabled",'disabled');
   if(width.value !== "" && height.value !== ""){
     per.value = width.value * 2 + height.value * 2;
     are.value = width.value * height.value;
