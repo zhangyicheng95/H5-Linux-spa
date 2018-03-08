@@ -1,3 +1,6 @@
+window.onload = function(){
+  document.getElementById('rectangle__width').focus();
+}
 var calc = document.getElementById('rectangle__calc');
 calc.onclick = function(){
   var width = document.getElementById('rectangle__width');
