@@ -1,0 +1,16 @@
+#box{
+  width:500px;
+  margin:0 auto;
+  position:relative;
+}
+#inp{
+  height:20px;
+  width:150px;
+}
+#uneye{
+  position:absolute;
+  height:20px;
+  width:20px;
+  margin-top:3px;
+  left:180px;
+}
