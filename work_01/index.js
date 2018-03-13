@@ -1,6 +1,6 @@
 window.onload = function(){
   document.getElementById('rectangle__width').focus();
-}
+
 var calc = document.getElementById('rectangle__calc');
 calc.onclick = function(){
   var width = document.getElementById('rectangle__width');
@@ -9,19 +9,18 @@ calc.onclick = function(){
   var are = document.getElementById('rectangle__area');
   /*字符级校验*/
   width.oninput = function(){
-    if(typeof width.value !== Number){
-      width.value = "";
-      document.getElementById('tx1').innerHTML = '请输入正数值'; 
+    if(typeof width.value !== Number || width.value<=0 || height.value<=0){      width.value = "";
+      document.getElementById('tx1').innerHTML = "请输入正数值"; 
     }
   }
   /*字段级校验*/
-  height.onfocus = function(){
+  width.onblur = function(){
     if(width.value !== ""){
       height.focus;
     }
   }
   /*表单级校验*/
-  if(width.value !== "" && height.value !== ""){
+  if(width.value !== "" && height.value !== "" && width.value > 0 && height.value > 0){
     var per_result = JSON.stringify((Number(width.value) * 2 + Number(height.value) * 2));
     per.value = parseFloat(per_result.slice(0,per_result.indexOf('.')+3));
     var are_result = JSON.stringify(Number(width.value) * Number(height.value));
@@ -39,4 +38,5 @@ calc.onclick = function(){
     document.getElementById('tx1').innerHTML = "";
     document.getElementById('tx2').innerHTML = "";
   }
+}
 }
