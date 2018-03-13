@@ -9,6 +9,12 @@ calc.onclick = function(){
   var are = document.getElementById('rectangle__area');
   $('#rectangle__perimeter').attr('disabled','disabled');
   $('#rectangle__area').attr("disabled",'disabled');
+  /*字符级校验*/
+  width.oninput = function(){
+    if(typeof width.value !== number){
+      width.value = "";
+      document.getElementById('tx1').innerHTML = '请输入正数值'; 
+    }
   if(width.value !== "" && height.value !== ""){
     per.value = width.value * 2 + height.value * 2;
     are.value = width.value * height.value;
