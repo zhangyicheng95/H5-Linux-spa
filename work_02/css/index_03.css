@@ -1,0 +1,11 @@
+*{
+  padding:0;
+  margin:0;
+}
+#box b,p{
+  font-size:25px;
+  font-weight:bold;
+}
+#inp{
+  width:250px;
+}
