@@ -1,0 +1,20 @@
+*{
+  margin:0;
+  padding:0;
+}
+#box{
+  width:1200px;
+  margin:0 auto;
+  text-align:center;
+}
+#box b{
+  font-size:30px;
+}
+#prg{
+  width:300px;
+  height:30px;
+}
+button{
+  font-size:25px;
+}
+
