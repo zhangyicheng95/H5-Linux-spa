@@ -1,3 +1,6 @@
+*{
+  padding:0;
+}
 #txt{
   font-family:'楷体';
 }
@@ -10,6 +13,9 @@ ul li{
 }
 #ul li{
   background:black;
+  color:white;
+  line-height:50px;
   height:50px;
   width:500px;
+  margin-top:10px;
 }
