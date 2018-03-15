@@ -1,0 +1,15 @@
+#txt{
+  font-family:'楷体';
+}
+#btn{
+  height:60px;
+  width:100px;
+}
+ul li{
+  list-style:none;
+}
+#ul li{
+  background:black;
+  height:50px;
+  width:500px;
+}
