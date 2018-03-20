@@ -13,6 +13,7 @@ window.onload = function(){
 	  }
 	  /*字段级校验*/
 	 $('rectangle__width').blur(function(){
+	 	alert('1');
 	    if(width.value == ""){
 	      width.focus();
 	    }
