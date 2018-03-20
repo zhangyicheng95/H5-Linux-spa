@@ -4,7 +4,7 @@ var timerButton = function(config){
   t=config.tLength;
   $(config.container).append($btn);
   
-  $('#btn').click(function(){
+  $btn.click(function(){
       $btn.trigger('timer-button-click');
   });
 

@@ -4,7 +4,7 @@
   var $btn=timerButton({
   'container':'div.main',
   'title':'同意',
-  'tLength':9,
+  'tLength':3,
   'enable':false
   });
   $btn.on('timer-button-click',function(){
