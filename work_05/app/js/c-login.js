@@ -1,6 +1,5 @@
 var $login = (function(){
 	var html = ''
-	+'<div id="admin-app">'
 		+'<div class="login">'
 			+'<h1>集团后台登录</h1>'
 			+'<form>'
@@ -16,9 +15,8 @@ var $login = (function(){
 				+'<input type="submit" value="登 录"/>'
 			+'</form>'
 		+'</div>'
-	+'</div>'
 	function show(config){
-		$(config.container).html(html);
+		$(config.container).html($(config.container).html() + html);
 	}
 	return {show:show}
 })();
