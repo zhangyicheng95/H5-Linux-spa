@@ -1,5 +1,5 @@
 var $login = (function(){
-	var html = ''
+	var $loginDOM = ''
 		+'<div class="login">'
 			+'<h1>集团后台登录</h1>'
 			+'<form>'
@@ -14,9 +14,22 @@ var $login = (function(){
 				+'<br />'
 				+'<input type="submit" value="登 录"/>'
 			+'</form>'
-		+'</div>'
+		+'</div>';
 	function show(config){
-		$(config.container).html($(config.container).html() + html);
+		$(app.config.appContainer).html('');
+		$(app.config.appContainer).html($loginDOM);
+		
+		var $form = $('form');
+		function validate(){
+			return true;
+		}
+		$form.submit(function(e){
+			e.preventDefault();
+			if(validate()){
+				//合法性校验
+			}
+			location.href = location.origin;
+		})
 	}
 	return {show:show}
 })();
