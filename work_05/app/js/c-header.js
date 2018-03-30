@@ -6,7 +6,7 @@ var $header = (function(){
 	+'<div class="account">'
 	+'	<div class="logo" id="logo"></div>'
 	+'	<span>管理</span>'
-	+'	<i class="iconfont icon-arrowdown" id="i1"></i>'
+	+'	<i class="iconfont icon-arrowdown-copy" id="i1"></i>'
 	+'	<div class="submenu">'
 	+'		<i class="iconfont icon-icon_logout"></i>'
 	+'		<span>注销</span>'
@@ -27,14 +27,14 @@ var $header = (function(){
 		
 		$account.mouseover(function(){
 			$menu.css('display','block');
-			$arrow.removeClass('icon-arrowdown');
+			$arrow.removeClass('icon-arrowdown-copy');
 			$arrow.addClass('icon-arrowup');
 			
 		});
 		$account.mouseout(function(){
 			$menu.css('display','none');
 			$arrow.removeClass('icon-arrowup');
-			$arrow.addClass('icon-arrowdown');
+			$arrow.addClass('icon-arrowdown-copy');
 		});
 		$menu.click(function(){
 			location.hash = '#/login';
