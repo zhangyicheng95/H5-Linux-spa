@@ -8,7 +8,7 @@ var $header = (function(){
 	+'	<span>管理</span>'
 	+'	<i class="iconfont icon-arrowdown" id="i1"></i>'
 	+'	<div class="submenu">'
-	+'		<i class="iconfont icon-sun-none"></i>'
+	+'		<i class="iconfont icon-icon_logout"></i>'
 	+'		<span>注销</span>'
 	+'	</div>'
 	+'</div>';
