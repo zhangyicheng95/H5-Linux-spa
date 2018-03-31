@@ -2,9 +2,10 @@ var $header = (function(){
 	$headerDOM = ''
 	+'<div class="title">'
 	+'	<h1></h1>'
+	+'	<a class="iconfont icon-daohang"></a>'
 	+'</div>'
 	+'<div class="account">'
-	+'	<div class="logo" id="logo"></div>'
+	+'	<div class="logo"></div>'
 	+'	<span>管理</span>'
 	+'	<i class="iconfont icon-arrowdown-copy" id="i1"></i>'
 	+'	<div class="submenu">'
@@ -20,21 +21,20 @@ var $header = (function(){
 			$account = $('.account'),
 			$menu = $('.submenu'),
 			$arrow = $('#i1');
-			console.log($account)
 		$title.html(app.config.headerTitle);
 		$logo.css('background','url('+app.config.headerLogo+')');
 		console.log($logo.css('background'))
 		
 		$account.mouseover(function(){
 			$menu.css('display','block');
-			$arrow.removeClass('icon-arrowdown-copy');
 			$arrow.addClass('icon-arrowup');
+			$arrow.removeClass('icon-arrowdown-copy');
 			
 		});
 		$account.mouseout(function(){
 			$menu.css('display','none');
-			$arrow.removeClass('icon-arrowup');
 			$arrow.addClass('icon-arrowdown-copy');
+			$arrow.removeClass('icon-arrowup');
 		});
 		$menu.click(function(){
 			location.hash = '#/login';
