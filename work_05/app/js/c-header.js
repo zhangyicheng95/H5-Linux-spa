@@ -23,13 +23,11 @@ var $header = (function(){
 			$arrow = $('#i1');
 		$title.html(app.config.headerTitle);
 		$logo.css('background','url('+app.config.headerLogo+')');
-		console.log($logo.css('background'))
 		
 		$account.mouseover(function(){
 			$menu.css('display','block');
 			$arrow.addClass('icon-arrowup');
 			$arrow.removeClass('icon-arrowdown-copy');
-			
 		});
 		$account.mouseout(function(){
 			$menu.css('display','none');

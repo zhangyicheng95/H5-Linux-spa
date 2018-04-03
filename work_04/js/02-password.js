@@ -1,5 +1,5 @@
 //实例化密码可见框
-var PasswordBox = (function(config) {
+var PasswordBox = function(config) {
 	var $pwd = $('<input type="password" />'),
 		$eyeImage = $('<img src="img/eye-close.png" />'),
 		$div = $('<div class="wd-main"><label for="">密码：</label></div>');
@@ -20,4 +20,4 @@ var PasswordBox = (function(config) {
 	this.getPwd = function() {
 		return $pwd.val();
 	}
-})();
+};
