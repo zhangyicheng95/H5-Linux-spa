@@ -14,30 +14,32 @@ var $header = (function(){
 	+'	</div>'
 	+'</div>';
 	
+	var $title = $('.title h1'),
+		$logo = $('.account .logo'),
+		$account = $('.account'),
+		$menu = $('.submenu'),
+		$arrow = $('#i1');
+	$title.html(app.config.headerTitle);
+	$logo.css('background','url('+app.config.headerLogo+')');
+	
+	function onMouseover(){
+		$menu.css('display','block');
+		$arrow.addClass('icon-arrowup');
+		$arrow.removeClass('icon-arrowdown-copy');
+	};
+	function onMouseout(){
+		$menu.css('display','none');
+		$arrow.addClass('icon-arrowdown-copy');
+		$arrow.removeClass('icon-arrowup');
+	};
+	function onClick(){
+		location.hash = '#/login';
+	};
 	function show(config){
 		$(app.config.appContainer).append('<div class="admin-app-header">'+$headerDOM+'</div>');
-		var $title = $('.title h1'),
-			$logo = $('.account .logo'),
-			$account = $('.account'),
-			$menu = $('.submenu'),
-			$arrow = $('#i1');
-		$title.html(app.config.headerTitle);
-		$logo.css('background','url('+app.config.headerLogo+')');
-		
-		$account.mouseover(function(){
-			$menu.css('display','block');
-			$arrow.addClass('icon-arrowup');
-			$arrow.removeClass('icon-arrowdown-copy');
-		});
-		$account.mouseout(function(){
-			$menu.css('display','none');
-			$arrow.addClass('icon-arrowdown-copy');
-			$arrow.removeClass('icon-arrowup');
-		});
-		$menu.click(function(){
-			location.hash = '#/login';
-		})
-		
+		$account.mouseover(onMouseover);
+		$account.mouseout(onMouseout);
+		$menu.click(onClick);
 	}
 	return {show:show};
 })();

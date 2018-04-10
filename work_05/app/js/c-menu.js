@@ -37,39 +37,42 @@ var $menu = (function(){
 		});
 		return $dom;
 	})();
+	
+	var $menuBar = $('.menu-bar'),
+		$menuItem = $('.item'),
+		$lastmenuBar = null;
+	function BaronClick(e){
+		var $menu = $(e.target).parents('li');
+		var $items = $menu.find('.menu-items');
+		var display = $items.css('display') === 'none'?'block':'none';
+		$items.css('display',display);
+		
+		//箭头方向
+		var arrowStyle = {'up': 'icon-arrowup', 'down': 'icon-arrowdown'};
+		var $menubars = $menu.find('.menu-bar>i:last-child');
+		if($menubars.hasClass(arrowStyle.down)){
+			$menubars.removeClass(arrowStyle.down);
+			$menubars.addClass(arrowStyle.up);
+		}else{
+			$menubars.removeClass(arrowStyle.up);
+			$menubars.addClass(arrowStyle.down);
+		}
+		
+		if(($lastmenuBar !== null) && ($lastmenuBar.get(0) !== $menu.get(0))){
+			$lastmenuBar.find('.menu-items').css('display','none');
+			$lastmenuBar.find('.menu-bar>i:last-child').removeClass(arrowStyle.up);
+			$lastmenuBar.find('.menu-bar>i:last-child').addClass(arrowStyle.down);
+		}
+		$lastmenuBar = $menu;
+	};
+	function ItemonClick(e){
+		var $item = $(e.currentTarget);
+		location.hash = $item.find('p').attr('data-href');
+	};
 	function show(config){
 		$(app.config.appContainer).append($menuDOM);
-		var $menuBar = $('.menu-bar'),
-			$menuItem = $('.item'),
-			$lastmenuBar = null;
-		$menuBar.click(function(e){
-			var $menu = $(e.target).parents('li');
-			var $items = $menu.find('.menu-items');
-			var display = $items.css('display') === 'none'?'block':'none';
-			$items.css('display',display);
-			
-			//箭头方向
-			var arrowStyle = {'up': 'icon-arrowup', 'down': 'icon-arrowdown'};
-			var $menubars = $menu.find('.menu-bar>i:last-child');
-			if($menubars.hasClass(arrowStyle.down)){
-				$menubars.removeClass(arrowStyle.down);
-				$menubars.addClass(arrowStyle.up);
-			}else{
-				$menubars.removeClass(arrowStyle.up);
-				$menubars.addClass(arrowStyle.down);
-			}
-			
-			if(($lastmenuBar !== null) && ($lastmenuBar.get(0) !== $menu.get(0))){
-				$lastmenuBar.find('.menu-items').css('display','none');
-				$lastmenuBar.find('.menu-bar>i:last-child').removeClass(arrowStyle.up);
-				$lastmenuBar.find('.menu-bar>i:last-child').addClass(arrowStyle.down);
-			}
-			$lastmenuBar = $menu;
-		})
-		$menuItem.click(function(e){
-			var $item = $(e.currentTarget);
-			location.hash = $item.find('p').attr('data-href');
-		})
+		$menuBar.click(BaronClick);
+		$menuItem.click(ItemonClick);
 	}
 	
 	return {show:show};

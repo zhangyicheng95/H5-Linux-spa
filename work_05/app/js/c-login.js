@@ -15,22 +15,25 @@ var $login = (function(){
 				+'<input type="submit" value="登 录"/>'
 			+'</form>'
 		+'</div>';
-	function show(config){
-		$(app.config.appContainer).html('');
-		$(app.config.appContainer).html($loginDOM);
 		
 		var $form = $('form');
 		function validate(){
 			return true;
 		}
-		$form.submit(function(e){
+//		$form.submit(function(e){
+		function onSubmit(e){
 			e.preventDefault();
 			if(validate()){
 				//合法性校验
 				location.hash = '#/index';
 				app.isLogin = true;
 			}
-		})
+		}
+	function show(config){
+		$(app.config.appContainer).html('');
+		$(app.config.appContainer).html($loginDOM);
+		
+		$form.submit(onSubmit);
 	}
 	return {show:show}
 })();
