@@ -67,8 +67,8 @@ var $menu = (function(){
 			$lastmenuBar = $menu;
 		})
 		$menuItem.click(function(e){
-			var $item = $(e.currentTarget);
-			location.hash = $item.find('p').attr('data-href');
+			var $menuItem = $(e.currentTarget);
+			location.hash = $menuItem.find('p').attr('data-href');
 		})
 	}
 	
