@@ -27,6 +27,7 @@ var $login = (function(){
 			e.preventDefault();
 			if(validate()){
 				//合法性校验
+				location.hash = '#/login';
 			}
 			location.href = location.origin;
 		})

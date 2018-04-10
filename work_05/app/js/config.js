@@ -8,7 +8,7 @@ app.config = {
 app.menuDate = [
 	{
 		'title':'门店管理',
-		'icon':'abc',
+		'icon':'icon-mendianguanli',
 		'items':[
 			{
 				'title':'门店列表',
@@ -19,7 +19,7 @@ app.menuDate = [
 	},
 	{
 		'title':'活动管理',
-		'icon':'bcd',
+		'icon':'icon-huodong',
 		'items':[
 			{
 				'title':'首次关注送券',
@@ -41,7 +41,7 @@ app.menuDate = [
 	},
 	{
 		'title':'密码管理',
-		'icon':'abc',
+		'icon':'icon-mimaguanli',
 		'items':[
 			{
 				'title':'修改密码',

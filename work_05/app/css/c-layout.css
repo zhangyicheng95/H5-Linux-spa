@@ -125,6 +125,7 @@ input[type="submit"]{
 	line-height: 45px;
 	padding-left: 20px;
 	border-left: 5px solid#393D49;
+	cursor:pointer;
 }
 .admin-app-menu .menu-bar:hover{
 	border-left: 5px solid#009688;
