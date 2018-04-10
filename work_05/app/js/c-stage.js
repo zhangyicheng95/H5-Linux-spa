@@ -9,6 +9,7 @@ var $stage = (function(){
 	 */
 	function load(router){
 		var panel = parsePanel(router);
+		eval(panel + '.show()')
 	}
 	
 	/**
@@ -16,7 +17,13 @@ var $stage = (function(){
 	 * @param {Object} router
 	 */
 	function parsePanel(router){
-		return '';
+		var panel = router.replace(/-(.)/g, function(letter){
+	      return letter.toUpperCase();
+	    }).replace(/#\//,'$')
+	      .replace(/-/g,'');
+	
+	    return panel + 'Panel';
+
 	}
 	return {show:show,load:load};
 })();
