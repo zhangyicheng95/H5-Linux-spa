@@ -27,9 +27,9 @@ var $login = (function(){
 			e.preventDefault();
 			if(validate()){
 				//合法性校验
-				location.hash = '#/login';
+				location.hash = '#/index';
+				app.isLogin = true;
 			}
-			location.href = location.origin;
 		})
 	}
 	return {show:show}
