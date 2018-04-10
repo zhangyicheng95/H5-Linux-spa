@@ -5,6 +5,7 @@ $(function(){
 	
 	window.onhashchange = function(){
 		if(location.hash === '#/index'){
+			$('#admin-app').html("");
 			$header.show();
 			$menu.show();
 			$stage.show();
