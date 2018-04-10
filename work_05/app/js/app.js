@@ -9,6 +9,9 @@ $(function(){
 			$menu.show();
 			$stage.show();
 			$footer.show();
+		}else if(location.hash === '#/login'){
+			$login.show();
+			app.isLogin = false;
 		}
 	}
 })
