@@ -5,9 +5,11 @@ var $header = (function(){
 	+'	<a class="iconfont icon-daohang"></a>'
 	+'</div>'
 	+'<div class="account">'
-	+'	<div class="logo"></div>'
-	+'	<span>管理</span>'
-	+'	<i class="iconfont icon-arrowdown-copy" id="i1"></i>'
+	+'	<div class="account-menu">'
+		+'	<i class="logo"></i>'
+		+'	<span>管理</span>'
+		+'	<i class="iconfont icon-arrowdown" id="i1"></i>'
+	+'	</div>'
 	+'	<div class="submenu">'
 	+'		<i class="iconfont icon-icon_logout"></i>'
 	+'		<span>注销</span>'
@@ -19,7 +21,7 @@ var $header = (function(){
 		
 		var $title = $('.title h1'),
 			$logo = $('.account .logo'),
-			$account = $('.account'),
+			$account = $('.account-menu'),
 			$menu = $('.submenu'),
 			$arrow = $('#i1');
 		$title.html(app.config.headerTitle);
@@ -28,11 +30,11 @@ var $header = (function(){
 		$account.mouseover(function(){
 			$menu.css('display','block');
 			$arrow.addClass('icon-arrowup');
-			$arrow.removeClass('icon-arrowdown-copy');
+			$arrow.removeClass('icon-arrowdown');
 		});
 		$account.mouseout(function(){
 			$menu.css('display','none');
-			$arrow.addClass('icon-arrowdown-copy');
+			$arrow.addClass('icon-arrowdown');
 			$arrow.removeClass('icon-arrowup');
 		});
 		$menu.click(function(){
