@@ -32,7 +32,7 @@ var $header = (function(){
 			$arrow.addClass('icon-arrowup');
 			$arrow.removeClass('icon-arrowdown');
 		});
-		$account.mouseout(function(){
+		$menu.mouseout(function(){
 			$menu.css('display','none');
 			$arrow.addClass('icon-arrowdown');
 			$arrow.removeClass('icon-arrowup');
