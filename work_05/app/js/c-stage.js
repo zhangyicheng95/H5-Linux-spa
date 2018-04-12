@@ -26,9 +26,7 @@ var $stage = function() {
    */
   function load(router) {
     var panel = getPanel(router);
-    console.log(panel);
     var result = panel + '.show()';
-    console.log(result);
     eval(result);
   }
 
