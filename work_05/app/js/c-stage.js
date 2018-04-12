@@ -1,5 +1,5 @@
 var $stage = function() {
-  function show() {
+  function show(config) {
     $(app.config.appContainer).append($('<div class="admin-app-stage"></div>'));
   }
   
@@ -26,9 +26,8 @@ var $stage = function() {
    */
   function load(router) {
     var panel = getPanel(router);
-    console.log(panel);
-    var result = eval(panel + ".show()");
-    return result;
+    console.log(panel+'.show()');
+    eval(panel + ".show();");
   }
 
   return {show: show, load: load};

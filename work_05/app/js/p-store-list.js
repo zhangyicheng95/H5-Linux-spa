@@ -1,6 +1,7 @@
 var $storeListPanel = (function() {
-  function show() {
-    $(app.config.panelContainer).html('<h1>$storeListPanel</h1>');
+  function show(config) {
+    $(app.config.panelContainer).html('');
+    $(app.config.panelContainer).append('<h1>$storeListPanel</h1>');
   }
 
   return {show: show};
