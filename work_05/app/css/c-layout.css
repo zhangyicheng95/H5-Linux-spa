@@ -11,6 +11,7 @@ html,body{
 	width: 100%;
 	height: 100%;
 }
+/*Login*/
 .login{
 	margin: 0 auto;
 	text-align: center;
@@ -45,6 +46,7 @@ input[type="submit"]{
     border: none;
     border-radius: 2px;
 }
+/*Header*/
 .admin-app-header{
 	height: 65px;
 	line-height: 65px;
@@ -111,6 +113,8 @@ input[type="submit"]{
 .admin-app-header .submenu i{
 	padding-left: 25px;
 }
+
+/*Menu*/
 .admin-app-menu{
 	position: absolute;
 	top: 70px;
@@ -141,12 +145,15 @@ input[type="submit"]{
 	background-color: #4e5465;
 }
 .admin-app-menu .menu-items{
+	cursor:pointer;
 	display: none;
 }
 .admin-app-menu .menu-items .item{
 	line-height: 40px;
 	margin-left: 50px;
 }
+
+/*Stage*/
 .admin-app-stage{
 	position: absolute;
 	top: 70px;
@@ -155,6 +162,44 @@ input[type="submit"]{
 	right: 0;
 	background-color: white;
 }
+.change-password-panel {
+  width: 300px;
+  margin: 50px 80px;
+}
+.change-password-panel input {
+  height: 36px;
+  width: 240px;
+  margin: 5px 0;
+  outline: none;
+  padding-left: 10px;
+  border: 1px solid #d2d2d2;
+}
+.change-password-panel input[type="submit"] {
+  background: #009688;
+  color: white;
+  width: 70px;
+  height: 38px;
+  padding: 0;
+  cursor: pointer;
+}
+.change-password-panel input[type="submit"]:hover {
+  background: #56A398;
+}
+.change-password-panel input[type="reset"] {
+  background: white;
+  color: #555;
+  width: 70px;
+  height: 38px;
+  padding: 0;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.change-password-panel input[type="reset"]:hover {
+  border: 1px solid #009688;
+  color: black;
+}
+
+/*Footer*/
 .admin-app-footer{
 	position: absolute;
 	left: 200px;
