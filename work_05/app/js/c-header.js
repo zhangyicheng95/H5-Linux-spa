@@ -22,13 +22,12 @@ var $header = (function(){
 		var $title = $('.title h1'),
 			$logo = $('.account .logo'),
 			$account = $('.account'),
-			$account_menu = $('.account_menu'),
 			$menu = $('.submenu'),
 			$arrow = $('#i1');
 		$title.html(app.config.headerTitle);
 		$logo.css('background','url('+app.config.headerLogo+')');
 		
-		$account_menu.mouseover(function(){
+		$account.mouseover(function(){
 			$menu.css('display','block');
 			$arrow.addClass('icon-arrowup');
 			$arrow.removeClass('icon-arrowdown');
