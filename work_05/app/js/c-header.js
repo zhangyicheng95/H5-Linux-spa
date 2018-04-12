@@ -19,8 +19,6 @@ var $header = (function(){
 		$account = $('.account'),
 		$menu = $('.submenu'),
 		$arrow = $('#i1');
-	$title.html(app.config.headerTitle);
-	$logo.css('background','url('+app.config.headerLogo+')');
 	
 	function onMouseOver() {
 		$menu.css('display','block');
@@ -40,6 +38,8 @@ var $header = (function(){
 	}
 	
 	function show(config){
+		$title.html(app.config.headerTitle);
+		$logo.css('background','url('+app.config.headerLogo+')');
 		$(app.config.appContainer).append('<div class="admin-app-header">'+$headerDOM+'</div>');
 		$account.mouseover(onMouseOver);
 	    $account.mouseout(onMouseOut);
