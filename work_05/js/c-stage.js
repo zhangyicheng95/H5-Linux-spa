@@ -12,8 +12,7 @@ var $stage = function() {
   function getPanel(router) {
     var panel = router.replace(/-(.)/g, function(letter){
       return letter.toUpperCase();
-    }).replace(/#\//,'$')
-      .replace(/-/g,'');
+    }).replace(/#\//,'$').replace(/-/g,'');
 
     return panel + 'Panel';
   }

@@ -1,5 +1,6 @@
 var $changePasswordPanel = (function() {
   var $changePwdDOM = $(''
+  	+'<div class="mbx">密码管理>修改密码</div>'
       + '<div class="change-password-panel">'
         + '<form>'
           + '<input class="origin-pwd" type="password" placeholder="请输入原密码" required><br>'

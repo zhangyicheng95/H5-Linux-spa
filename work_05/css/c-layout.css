@@ -163,9 +163,15 @@ input[type="submit"]{
 	right: 0;
 	background-color: white;
 }
+.mbx{
+	background-color: #c4c4c4;
+	height: 35px;
+	line-height: 35px;
+	padding-left: 10px;
+}
 .change-password-panel {
   width: 300px;
-  margin: 50px 80px;
+  margin: 50px auto;
 }
 .change-password-panel input {
   height: 36px;
@@ -198,6 +204,19 @@ input[type="submit"]{
 .change-password-panel input[type="reset"]:hover {
   border: 1px solid #009688;
   color: black;
+}
+#table{
+	border-collapse: collapse; 
+	margin: 10px auto;
+}
+#table th,#table td{
+	text-align: center;
+	border: 1px solid #000; 
+	width: 100px;
+	height: 40px;
+}
+#table button{
+	padding: 5px 10px;
 }
 
 /*Footer*/

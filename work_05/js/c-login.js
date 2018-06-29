@@ -1,7 +1,7 @@
 var $login = (function(){
 	var $loginDOM = ''
 		+'<div class="login">'
-			+'<h1>集团后台登录</h1>'
+			+'<h1>管理后台登录</h1>'
 			+'<form>'
 				+'<label>用户名　</label>'
 				+'<input type="text" />'
